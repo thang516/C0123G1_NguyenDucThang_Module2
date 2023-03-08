@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ef3b58f5-13d9-4029-80ad-d48af7980cf5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../ss1/ChuyenDoiTienTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/DocSoThanhChu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss1/Hello.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/GopMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/HienThiSoNguyenTo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/PhanTuLonNhatCuaMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/SoNguyenToDuoi100.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/SoNhoNhatTrongMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/ThemPhanTuVaoMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/VeHinh.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/XoaPhanTuKhoiMang.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/GopMang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/HienThiSoNguyenTo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/PhanTuLonNhatCuaMang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/SoNguyenToDuoi100.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/SoNhoNhatTrongMang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/ThemPhanTuVaoMang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/VeHinh.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/XoaPhanTuKhoiMang.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Mjk0VqSMKRZD1Z2QvpS0yPCH3j" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/codegym/C0123G1_NguyenDucThang_Module2/ss3"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef3b58f5-13d9-4029-80ad-d48af7980cf5" name="Changes" comment="" />
+      <created>1678288156019</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678288156019</updated>
+      <workItem from="1678288157278" duration="109000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
