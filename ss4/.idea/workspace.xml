@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef3b58f5-13d9-4029-80ad-d48af7980cf5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ss1/ChuyenDoiTienTe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss1/DocSoThanhChu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss1/Hello.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/GopMang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/HienThiSoNguyenTo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/PhanTuLonNhatCuaMang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/SoNguyenToDuoi100.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/SoNhoNhatTrongMang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/ThemPhanTuVaoMang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/VeHinh.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/out/production/ss2/ss2_baitap/XoaPhanTuKhoiMang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/GopMang.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/HienThiSoNguyenTo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/PhanTuLonNhatCuaMang.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/SoNguyenToDuoi100.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/SoNhoNhatTrongMang.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/ThemPhanTuVaoMang.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/VeHinh.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss2/ss2_baitap/XoaPhanTuKhoiMang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss4_baitap/ss4/QuadraticEquation.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss4_baitap/ss4/QuadraticEquation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,14 +29,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/codegym/C0123G1_NguyenDucThang_Module2/ss3"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/codegym/C0123G1_NguyenDucThang_Module2/ss4/ss4_baitap&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -63,6 +46,8 @@
       <option name="presentableId" value="Default" />
       <updated>1678288156019</updated>
       <workItem from="1678288157278" duration="109000" />
+      <workItem from="1678291178330" duration="218000" />
+      <workItem from="1678333213104" duration="18000" />
     </task>
     <servers />
   </component>
