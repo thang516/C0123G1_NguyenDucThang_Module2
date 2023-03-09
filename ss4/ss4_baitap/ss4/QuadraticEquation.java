@@ -3,8 +3,6 @@ package ss4;
 import java.util.Scanner;
 
 public class QuadraticEquation {
-
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập a ");
@@ -14,16 +12,15 @@ public class QuadraticEquation {
         System.out.println("Nhập c ");
         double c = scanner.nextDouble();
         Qua nhapDulieu = new Qua(a, b, c);
-        if (nhapDulieu.getDiscriminant() >= 0) {
-            System.out.println("Phương trình có 2 nghiệm \n" + "Nghiệm 1: " + nhapDulieu.getRoot1() + "Nghiệm 2:" + nhapDulieu.getRoot2());
+        if (nhapDulieu.getDiscriminant() > 0) {
+            System.out.println("Phương trình có 2 nghiệm");
+            System.out.println("Nghiệm 1: " + nhapDulieu.getRoot1() + ", Nghiệm 2:" + nhapDulieu.getRoot2());
         } else if (nhapDulieu.getDiscriminant() == 0) {
             System.out.println("Phương trình có 1 nghiệm kép : " + nhapDulieu.getRoot3());
         } else {
             System.out.println("Phương trình vô nghiệm");
         }
-
     }
-
 }
 
 class Qua {
@@ -65,17 +62,17 @@ class Qua {
     }
 
     public double getRoot1() {
-        double r1 = -this.b + Math.sqrt((Math.pow(this.b, 2)) - 4 * this.a * this.c) / 2 * this.a;
+        double r1 = ((-this.b) + Math.sqrt(this.getDiscriminant())) / (2 * this.a);
         return r1;
     }
 
     public double getRoot2() {
-        double r2 = -this.b - Math.sqrt((Math.pow(this.b, 2)) - 4 * this.a * this.c) / 2 * this.a;
+        double r2 = ((-this.b) - Math.sqrt(this.getDiscriminant())) / (2 * this.a);
         return r2;
     }
 
     public double getRoot3() {
-        double r3 = -this.b / 2 * this.a;
+        double r3 = -this.b / (2 * this.a);
         return r3;
     }
 
