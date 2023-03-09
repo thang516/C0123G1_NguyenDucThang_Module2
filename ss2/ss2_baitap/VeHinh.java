@@ -58,7 +58,7 @@ public class VeHinh {
                 }
                 break;
             case 6:
-                int chieuCao = 5;
+                int chieuCao = 4;
                 int chieuRong = 9;
                 double middle = Math.ceil(chieuRong / 2);
                 for (int i = 1; i <= chieuCao; i++) {

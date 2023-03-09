@@ -5,12 +5,7 @@ import java.util.Scanner;
 
 public class ThemPhanTuVaoMang {
     public static void main(String[] args) {
-//    int[] arr=new int[10];
         Scanner scanner = new Scanner(System.in);
-//        for (int i = 0; i < arr.length; i++) {
-//            System.out.println("Nhập các phần tử trong mãng "+(i+1));
-//            arr[i]=scanner.nextInt();
-//        }
         int[] arr = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 0, 0};
         System.out.println("nhập 1 số");
         int giaTri = scanner.nextInt();
@@ -21,7 +16,7 @@ public class ThemPhanTuVaoMang {
         } else {
             for (int i = arr.length - 1; i >= viTri; i--) {
                 arr[i] = arr[i - 1];
-                if (i == viTri){
+                if (i == viTri) {
                     arr[i] = giaTri;
 
                 }
