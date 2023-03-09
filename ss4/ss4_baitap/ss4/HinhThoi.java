@@ -2,39 +2,32 @@ package ss4;
 
 public class HinhThoi {
     public static void main(String[] args) {
-        int a = 4;
-        int b = 5;
-        int x = 1;
-        for (int i = 0; i < 5; i++) {
+         int  middle = 5;
+         int left=4;
+         int right=5;
+         int index =  1;
+        for (int i = 1; i <= 9; i++) {
             for (int j = 0; j < 10; j++) {
-                if (j == a || j == b) {
-                    System.out.print(x);
-                } else {
-                    System.out.print(" ");
-                }
+               if(j==left || j==right){
+                   System.out.print(index);
+               }else{
+                   System.out.print(" ");
+               }
             }
-            System.out.println();
-            a--;
-            b++;
-            x++;
+            if(i>4){
+                index--;
+                left++;
+                right--;
+            }else{
+                index++;
+                left--;
+                right++;
+
+            }
+        System.out.println();
         }
-        int c = 1;
-        int d = 8;
-        int y = 4;
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 10; j++) {
-                if (j == c || j == d) {
-                    System.out.print(y);
-                } else {
-                    System.out.print(" ");
-                }
-            }
-            System.out.println();
-            c++;
-            d--;
-            y--;
         }
     }
-}
+
 
 
