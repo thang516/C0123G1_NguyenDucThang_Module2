@@ -30,6 +30,7 @@ public class MainMenu {
                     break;
                 case 3:
                     System.out.println("Chức năng Xóa");
+                    studentManager.delete();
                     break;
                 default:
                     System.out.println("thoát");
