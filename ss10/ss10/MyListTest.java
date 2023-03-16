@@ -17,9 +17,11 @@ public class MyListTest {
         System.out.println(myList.contains("rrrr"));
         System.out.println(Arrays.toString(myList.clone()));
         System.out.println(Integer.toString(myList.indexOf("rrrr")));
+        myList.add(1, "rsss");
+        System.out.println("----00-----" + Arrays.toString(myList.clone()));
+
         myList.clear();
         System.out.println(Arrays.toString(myList.clone()));
-
     }
 
 

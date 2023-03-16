@@ -34,12 +34,12 @@ public class MyList<E> {
         } else {
             E deleteItem = elements[index];
             for (int i = index; i < elements.length; i++) {
-                if(i != elements.length-1) {
+                if (i != elements.length - 1) {
                     elements[i] = elements[i + 1];
                 }
             }
             size--;
-            return  deleteItem;
+            return deleteItem;
 
         }
     }
@@ -67,27 +67,23 @@ public class MyList<E> {
 
     public int indexOf(E o) {
         if (o == null) {
-            for (int i = 0; i < size; i++) {
-                if (elements[i] == null) {
-                    return i;
-                }
-            }
+            return -1;
         } else {
             for (int i = 0; i < size; i++) {
                 if (o.equals(elements[i])) {
                     return i;
                 }
             }
+            return -1;
         }
-        return -1;
     }
 
     public boolean add(int index, E element) {
         if (index >= 0 && index <= size) {
             size += 1;
             ensureCapacity();
-            for (int i = size - 2; i >= index; i--) {
-                elements[i + 1] = elements[i];
+            for (int i = size - 1; i > index; i--) {
+                elements[i] = elements[i - 1];
             }
             elements[index] = element;
             return true;
