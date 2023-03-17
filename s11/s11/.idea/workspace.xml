@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ede531fc-9b4c-4090-a586-c1bf2222f543" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../case/services/lpml/FacilityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LamThem/controllers/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LamThem/models/GiangVien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LamThem/models/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LamThem/models/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LamThem/service/IStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../s11_bai1/DoiNguoc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../s11_bai1/DoiNguoc2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../s11_bai2/DemSoLanXuatHien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../s11_bai3/HeThapPhanSangNhiPhan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../s11_bai4/KiemTraChuoiPalindrome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../s11_bai5/KiemTraDauNgoac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/controllers/FuramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/controllers/FuramaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/models/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/models/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/models/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/models/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/models/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/models/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/models/Facility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/models/Hourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/models/Hourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/models/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/models/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/models/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/services/CustomerServicelmpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/services/CustomerServicelmpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/services/FacilityServicelmpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/services/IBookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/services/IBookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/services/IContactService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/services/IContactService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/services/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/services/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/services/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/services/IEmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/services/IFacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/services/IFacilityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case/services/IService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case/services/IService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2N8funzxyVhFEszaxRZ0n584YPt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/codegym/C0123G1_NguyenDucThang_Module2/s11"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ede531fc-9b4c-4090-a586-c1bf2222f543" name="Changes" comment="" />
+      <created>1679050854389</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679050854389</updated>
+      <workItem from="1679050855862" duration="7000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
