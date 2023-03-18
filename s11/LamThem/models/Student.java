@@ -3,8 +3,8 @@ package models;
 import service.IStudent;
 
 public class Student extends Person {
-        private  String lop;
-        private  int diemSo;
+    private String lop;
+    private int diemSo;
 
     public Student() {
     }
@@ -31,7 +31,14 @@ public class Student extends Person {
         this.diemSo = diemSo;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Student :" +
+                "  lớp '" + this.getLop() + '\'' +
+                ", điểm số : =" + this.getDiemSo() +
+                ", mã  :" + this.getMa() +
+                ", tên : '" + this.getTen() + '\'' +
+                ", ngày Sinh : '" + this.getNgaySinh() + '\'' +
+                ", giới tính :'" + this.getGioiTinh() + '\'';
+    }
 }

@@ -47,4 +47,14 @@ public class Person {
     public void setGioiTinh(String gioiTinh) {
         this.gioiTinh = gioiTinh;
     }
+
+    @Override
+    public String toString() {
+        return "Person : " +
+                " mã : " + this.getMa() +
+                ", tên : '" + this.getTen() + '\'' +
+                ", ngày sinh  : '" + this.getNgaySinh() + '\'' +
+                ", giới tính :  " + this.getGioiTinh() + '\''
+                ;
+    }
 }
