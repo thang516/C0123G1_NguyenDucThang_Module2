@@ -22,29 +22,28 @@ public class DeQuyTimKiemNhiPhan {
 
     public static int binarySearch(ArrayList<Integer> array, int left, int right, int value) {
         int middle = (left + right) / 2;
-        for (int i = 0; i < array.size(); i++) {
-            if (array.get(middle) == value) {
-                return middle;
-            } else if (value > array.get(middle)) {
-                left = middle + 1;
-                if (left == right) {
-                    if (array.get(left) == value) {
-                        return left;
-                    }
-                    return -1;
+        if (array.get(middle) == value) {
+            return middle;
+        } else if (value > array.get(middle)) {
+            left = middle + 1;
+            if (left == right) {
+                if (array.get(left) == value) {
+                    return left;
                 }
-                return binarySearch(array, left, right, value);
-            } else if (value < array.get(middle)) {
-                right = middle - 1;
-                if (left == right) {
-                    if (array.get(left) == value) {
-                        return left;
-                    }
-                    return -1;
-                }
-                return binarySearch(array, left, right, value);
+                return -1;
             }
+            return binarySearch(array, left, right, value);
+        } else if (value < array.get(middle)) {
+            right = middle - 1;
+            if (left == right) {
+                if (array.get(left) == value) {
+                    return left;
+                }
+                return -1;
+            }
+            return binarySearch(array, left, right, value);
         }
+
         return -1;
 
     }
