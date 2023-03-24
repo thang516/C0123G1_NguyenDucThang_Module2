@@ -1,4 +1,4 @@
-package baitap_ss16;
+package baitap_ss16.copy_read_csv;
 
 import baitap_ss16.copy_read_csv.Country;
 

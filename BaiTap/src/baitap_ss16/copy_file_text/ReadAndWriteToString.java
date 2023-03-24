@@ -1,7 +1,5 @@
 package baitap_ss16.copy_file_text;
 
-import baitap_ss16.ReadFileCSV;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
