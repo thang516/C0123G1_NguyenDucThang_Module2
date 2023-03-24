@@ -6,19 +6,26 @@ import java.util.Scanner;
 
 public class OnTap {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5};
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhập phần tử cần xóa");
-        int x = scanner.nextInt();
-        for (int i = 0; i < arr.length; i++) {
-            if (x == arr[i]) {
+        int[] a = new int[]{1, 2, 3, 3};
 
-                for (int j = i; j < arr.length - 1; j++) {
-                    arr[j] = arr[j + 1];
-                }
-                arr[arr.length - 1] = 0;
+        System.out.println(check(a));
+    }
+
+
+    public static boolean check(int[] a) {
+        for (int i = 0; i < a.length; i++) {
+            int left = 0;
+            int right = 0;
+            for (int j = 0; j < i; j++) {
+                left += a[j];
+            }
+            for (int j = i + 1; j < a.length; j++) {
+                right += a[j];
+            }
+            if (left == right) {
+                return true;
             }
         }
-        System.out.println(Arrays.toString(arr));
+        return false;
     }
 }
