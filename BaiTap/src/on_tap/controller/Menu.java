@@ -17,23 +17,26 @@ public class Menu {
                     "\n 1.Display" +
                     "\n 2.Add" +
                     "\n 3.Delete" +
-                    "\n 4.Exit");
+                    "\n 4.eidt"+
+                    "\n 5.Exit");
             System.out.println("Chọn chức năng ");
             int choose=Integer.parseInt(scanner.nextLine());
+            int studentId;
+            boolean check;
             switch (choose){
                 case 1:
                     System.out.println("1.Display");
                     studentService.display();
                     break;
                 case 2:
-                    System.out.println("1.Add");
+                    System.out.println("--------Add-------------");
                     studentService.add();
                     break;
                 case 3:
-                    System.out.println("1.Delete");
+                    System.out.println("-------Delete----------");
                     System.out.println("Nhập mã học sinh zô");
-                    int maHocSinh=Integer.parseInt(scanner.nextLine());
-                    boolean check= studentService.check(maHocSinh);
+                    studentId=Integer.parseInt(scanner.nextLine());
+                    check= studentService.check(studentId);
                     if(check){
                         System.out.println("Nhập mã học sinh");
                         boolean flag1 = true;
@@ -43,7 +46,7 @@ public class Menu {
                             int chose=Integer.parseInt(scanner.nextLine());
                             switch (chose){
                                 case 1:
-                                    studentService.delete(maHocSinh);
+                                    studentService.delete(studentId);
                                     flag1=false;
                                     break;
                                 default:
@@ -57,8 +60,19 @@ public class Menu {
                         System.out.println("Không xóa");
                     }
                     break;
-
                 case 4:
+                    System.out.println("4. Edit");
+                    System.out.println("Nhập mã học sinh ");
+                    studentId=Integer.parseInt(scanner.nextLine());
+                    check= studentService.check(studentId);
+                    if(check){
+                        studentService.edit(studentId);
+                    }else {
+                        System.out.println(" ERROR ");
+                    }
+                    break;
+
+                case 5:
                     System.out.println("1.Thoát ");
                     flag=false;
                     break;
