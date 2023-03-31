@@ -1,2 +1,7 @@
-package services;public interface FacilityService {
+package services;
+
+import models.Facility;
+
+public interface IFacilityService extends IService{
+
 }

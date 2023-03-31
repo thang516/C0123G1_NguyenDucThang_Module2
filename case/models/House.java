@@ -1,22 +1,22 @@
 package models;
 
-public class Hourse extends Facility{
-  private String roomStandard;
-   private String numberOfFloor;
+public class House extends Facility {
+    private String roomStandard;
+    private String numberOfFloor;
 
-    public Hourse(String nameFacility, String usableArea, String rentalCosts, String maximumQuantity, String typeOfRental, String roomStandard, String numberOfFloor) {
+    public House(String nameFacility, String usableArea, String rentalCosts, String maximumQuantity, String typeOfRental, String roomStandard, String numberOfFloor) {
         super(nameFacility, usableArea, rentalCosts, maximumQuantity, typeOfRental);
         this.roomStandard = roomStandard;
         this.numberOfFloor = numberOfFloor;
     }
 
-    public Hourse(Facility f, String roomStandard, String numberOfFloor) {
+    public House(Facility f, String roomStandard, String numberOfFloor) {
         super(f.nameFacility, f.usableArea, f.rentalCosts, f.maximumQuantity, f.typeOfRental);
         this.roomStandard = roomStandard;
         this.numberOfFloor = numberOfFloor;
     }
 
-    public Hourse() {
+    public House() {
     }
 
     public String getRoomStandard() {
@@ -42,11 +42,12 @@ public class Hourse extends Facility{
                 ", Diện tích sử dụng : " + this.getUsableArea() +
                 ", Chi phí thuê :" + this.getRentalCosts() +
                 ", Số lượng tối đa : " + this.getMaximumQuantity() +
-                ", Kiểu thuê :  " + this.getTypeOfRental()+
+                ", Kiểu thuê :  " + this.getTypeOfRental() +
                 ", Tiêu chuẩn phòng :" + this.getRoomStandard() + '\'' +
-                ", Số tầng :" + this.getNumberOfFloor() ;
+                ", Số tầng :" + this.getNumberOfFloor();
     }
-    public String getInfoToCsv(){
-        return nameFacility+","+usableArea+","+rentalCosts+","+maximumQuantity+","+typeOfRental+","+roomStandard+","+numberOfFloor;
+
+    public String getInfoToCsv() {
+        return nameFacility + "," + usableArea + "," + rentalCosts + "," + maximumQuantity + "," + typeOfRental + "," + roomStandard + "," + numberOfFloor;
     }
 }
