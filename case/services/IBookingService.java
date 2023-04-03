@@ -1,10 +1,7 @@
 package services;
 
+import models.Booking;
+
 public interface IBookingService extends IService {
 
-    void create();
-
-    void displayListContracts();
-
-    void edit();
 }

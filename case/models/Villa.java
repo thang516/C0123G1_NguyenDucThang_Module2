@@ -6,15 +6,15 @@ public class Villa extends Facility {
     private String numberOfFloor;
 
 
-    public Villa(String nameFacility, String usableArea, String rentalCosts, String maximumQuantity, String typeOfRental, String roomStandard, String swimmingPoolArea, String numberOfFloor) {
-        super(nameFacility, usableArea, rentalCosts, maximumQuantity, typeOfRental);
+    public Villa(String facilityId, String nameFacility, String usableArea, String rentalCosts, int maximumQuantity, String typeOfRental, String roomStandard, String swimmingPoolArea, String numberOfFloor) {
+        super(facilityId, nameFacility, usableArea, rentalCosts, maximumQuantity, typeOfRental);
         this.roomStandard = roomStandard;
         this.swimmingPoolArea = swimmingPoolArea;
         this.numberOfFloor = numberOfFloor;
     }
 
     public Villa(Facility f, String roomStandard, String swimmingPoolArea, String numberOfFloor) {
-        super(f.nameFacility, f.usableArea, f.rentalCosts, f.maximumQuantity, f.typeOfRental);
+        super(f.facilityId,f.nameFacility, f.usableArea, f.rentalCosts, f.maximumQuantity, f.typeOfRental);
         this.roomStandard = roomStandard;
         this.swimmingPoolArea = swimmingPoolArea;
         this.numberOfFloor = numberOfFloor;
@@ -51,7 +51,8 @@ public class Villa extends Facility {
     @Override
     public String toString() {
         return "Villa : " +
-                " Tên dịch vụ :'" + this.getNameFacility() + '\'' +
+                "Id :"+this.getFacilityId()+
+                ", Tên dịch vụ :'" + this.getNameFacility() + '\'' +
                 ", Diện tích sử dụng :" + this.getUsableArea() +
                 ", Chi phí thuê :" + this.getRentalCosts() +
                 ", Số lượng tối đa :" + this.getMaximumQuantity() +
@@ -62,7 +63,7 @@ public class Villa extends Facility {
     }
 
     public String getInfoToCsv() {
-        return nameFacility + "," + usableArea + "," + rentalCosts + "," + maximumQuantity + "," + roomStandard + "," +
+        return facilityId+","+nameFacility + "," + usableArea + "," + rentalCosts + "," + maximumQuantity + "," + roomStandard + "," +
                 swimmingPoolArea + "," + typeOfRental + "," + numberOfFloor;
     }
 }

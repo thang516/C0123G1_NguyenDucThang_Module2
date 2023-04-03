@@ -5,6 +5,7 @@ import models.House;
 import repository.HouseRepository;
 import repository.IHouseRepository;
 import services.IHouseService;
+import util.Regex;
 
 import java.util.*;
 
@@ -21,13 +22,17 @@ public class HouseService implements IHouseService {
 
     @Override
     public void add() {
-        Facility facility = insertInformation();
-        System.out.println("Nhập tiêu chuẩn phòng ");
-        String roomStandard = scanner.nextLine();
-        System.out.println("Nhập số  tầng ");
-        String floor = scanner.nextLine();
-        House house = new House(facility, roomStandard, floor);
+        House house = new House();
+        try {
 
+
+            Facility facility = insertInformation("House");
+            String roomStandard = Regex.checkRegrex("^[A-Z][a-z]+$", "Nhập tiêu chuẩn phòng viết hoa chữ cái đầu nhé ");
+            String floor = Regex.checkRegrex("^[0-9]{0,2}$", "Nhập số  tầng -> số tầng là phải dương nhé :D ");
+            house = new House(facility, roomStandard, floor);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         houseIntegerLinkedHashMap.put(house, 0);
     }
 
@@ -37,6 +42,6 @@ public class HouseService implements IHouseService {
         for (House key : keySet) {
             System.out.println(key + " " + houseIntegerLinkedHashMap.get(key));
         }
-
     }
+
 }

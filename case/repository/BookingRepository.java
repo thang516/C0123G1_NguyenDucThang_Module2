@@ -1,19 +1,17 @@
 package repository;
 
 import models.Booking;
+import models.Employee;
+import models.Facility;
 import util.ReadAndWriteToFile;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.*;
 
 public class BookingRepository implements IBookingRepository{
 private final String PATH_FILE="data\\booking.csv";
-
-    @Override
-    public void addNewBookingRepository(Booking booking) {
-        ReadAndWriteToFile.writeToFile(PATH_FILE,booking.getInfoToCsv(),true);
-    }
-
     @Override
     public List<Booking> displayListBookingRepository() {
         List<Booking> bookingList=new ArrayList<>();
@@ -29,12 +27,19 @@ private final String PATH_FILE="data\\booking.csv";
     }
 
     @Override
-    public void createNewContractRepository() {
+    public void updateRepository(TreeSet<Booking> bookings) {
+        File file = new File("data\\booking.csv");
+        try {
+            PrintWriter writer = new PrintWriter(file);
+            writer.print("");
+            writer.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
 
-    }
+        for (Booking x : bookings) {
+            ReadAndWriteToFile.writeToFile(PATH_FILE, x.getInfoToCsv(), true);
 
-    @Override
-    public void displayListContractsRepository() {
-
+        }
     }
 }

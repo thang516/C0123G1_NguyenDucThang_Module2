@@ -3,17 +3,19 @@ package models;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Facility {
+public   class Facility {
+    protected String facilityId;
     protected String nameFacility;
     protected String usableArea;
     protected String rentalCosts;
-    protected String maximumQuantity;
+    protected int maximumQuantity;
     protected String typeOfRental;
 
     public Facility() {
     }
 
-    public Facility(String nameFacility, String usableArea, String rentalCosts, String maximumQuantity, String typeOfRental) {
+    public Facility( String facilityId,String nameFacility, String usableArea, String rentalCosts, int maximumQuantity, String typeOfRental) {
+        this.facilityId=facilityId;
         this.nameFacility = nameFacility;
         this.usableArea = usableArea;
         this.rentalCosts = rentalCosts;
@@ -23,6 +25,14 @@ public class Facility {
 
     public String getNameFacility() {
         return nameFacility;
+    }
+
+    public String getFacilityId() {
+        return facilityId;
+    }
+
+    public void setFacilityId(String facilityId) {
+        this.facilityId = facilityId;
     }
 
     public void setNameFacility(String nameFacility) {
@@ -45,11 +55,11 @@ public class Facility {
         this.rentalCosts = rentalCosts;
     }
 
-    public String getMaximumQuantity() {
+    public int getMaximumQuantity() {
         return maximumQuantity;
     }
 
-    public void setMaximumQuantity(String maximumQuantity) {
+    public void setMaximumQuantity(int maximumQuantity) {
         this.maximumQuantity = maximumQuantity;
     }
 
@@ -77,7 +87,8 @@ public class Facility {
     @Override
     public String toString() {
         return "Facility : " +
-                " Tên dịch vụ : '" + this.getNameFacility() + '\'' +
+                " id :" + this.getFacilityId()+
+                ", Tên dịch vụ : '" + this.getNameFacility() + '\'' +
                 ", Diện tích sử dụng :" + this.getUsableArea() +
                 ",  Chi phí thuê : " + this.getRentalCosts() +
                 ", Số lượng tối đa :  " + this.getMaximumQuantity() +
@@ -85,7 +96,7 @@ public class Facility {
     }
 
     public String getInfoToCsv() {
-        return nameFacility + "," + usableArea + "," + rentalCosts + "," + maximumQuantity + "," + typeOfRental;
+        return facilityId+","+nameFacility + "," + usableArea + "," + rentalCosts + "," + maximumQuantity + "," + typeOfRental;
 
     }
 }

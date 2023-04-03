@@ -1,12 +1,12 @@
 package models;
 
 public class Customer extends Person {
-    private int customerId;
+    private String customerId;
     private String customerType;
     private String address;
 
-    public Customer(int customerId, String fullName, String dateOfBirth, String sex, String cmnd, String phoneNumber, String email, String customerType, String address) {
-        super(fullName, dateOfBirth, sex, cmnd, phoneNumber, email);
+    public Customer(String customerId, String fullName, String dateOfBirth, String sex, String citizenIdentification, String phoneNumber, String email, String customerType, String address) {
+        super(fullName, dateOfBirth, sex, citizenIdentification, phoneNumber, email);
         this.customerId = customerId;
         this.customerType = customerType;
         this.address = address;
@@ -15,11 +15,11 @@ public class Customer extends Person {
     public Customer() {
     }
 
-    public int getCustomerId() {
+    public String getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(int customerId) {
+    public void setCustomerId(String customerId) {
         this.customerId = customerId;
     }
 
@@ -46,7 +46,7 @@ public class Customer extends Person {
                 ", Họ và tên :'" + this.getFullName() + '\'' +
                 ",Ngày sinh :" + this.getDateOfBirth() +
                 ",Giới tính :'" + this.getSex() + '\'' +
-                ", Số CMND :" + this.getCmnd() +
+                ", Số CMND :" + this.getCitizenIdentification() +
                 ", Số điện thoại : " + this.getPhoneNumber() +
                 ", Email :'" + this.getEmail() + '\'' +
                 ", Loại Khách :'" + this.getCustomerType() + '\'' +
@@ -54,7 +54,7 @@ public class Customer extends Person {
     }
 
     public String getInfoToCsv() {
-        return customerId + "," + fullName + "," + dateOfBirth + "," + sex + "," + cmnd + "," + phoneNumber + ","
+        return customerId + "," + fullName + "," + dateOfBirth + "," + sex + "," + citizenIdentification + "," + phoneNumber + ","
                 + email + "," + customerType + "," + address;
     }
 }

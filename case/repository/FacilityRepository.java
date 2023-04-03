@@ -20,7 +20,7 @@ public class FacilityRepository implements IFacilityRepository {
         for (int i = 0; i < size; i++) {
             String str = stringList.get(i);
             String[] arr = str.split(",");
-            Facility facility = new Facility(arr[0], arr[1], arr[2], arr[3], arr[4]);
+            Facility facility = new Facility(arr[0],arr[1], arr[2], arr[3],Integer.parseInt(arr[4]) ,arr[5]);
             facilityList.put(facility, +1);
         }
         return facilityList;

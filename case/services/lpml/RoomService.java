@@ -22,11 +22,16 @@ public class RoomService implements IRoomService {
 
     @Override
     public void add() {
-        Scanner scanner = new Scanner(System.in);
-        Facility facility = insertInformation();
-        System.out.println(" Nhập  dịch vụ miễn phí đi kèm ");
-        String service = scanner.nextLine();
-        Room room = new Room(facility, service);
+        Room room = new Room();
+        try {
+            Scanner scanner = new Scanner(System.in);
+            Facility facility = insertInformation("Room");
+            System.out.println(" Nhập  dịch vụ miễn phí đi kèm ");
+            String service = scanner.nextLine();
+            room = new Room(facility, service);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         roomIntegerLinkedHashMap.put(room, 0);
     }
 

@@ -1,4 +1,8 @@
 package services;
 
-public interface IContactService extends IService{
+public interface IContactService {
+     void editContract(int contractNumber);
+    void displayListContracts();
+
+    void create();
 }

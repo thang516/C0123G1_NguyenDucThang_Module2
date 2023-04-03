@@ -1,13 +1,13 @@
 package models;
 
-public class Contract {
-    private String contractNumber;
+public class Contract implements Comparable<Contract> {
+    private int contractNumber;
     private String bookingCode;
     private String deposit;
     private String paymentAmount;
     private String customerId;
 
-    public Contract(String contractNumber, String bookingCode, String deposit, String paymentAmount, String customerId) {
+    public Contract(int contractNumber, String bookingCode, String deposit, String paymentAmount, String customerId) {
         this.contractNumber = contractNumber;
         this.bookingCode = bookingCode;
         this.deposit = deposit;
@@ -18,11 +18,11 @@ public class Contract {
     public Contract() {
     }
 
-    public String getContractNumber() {
+    public int getContractNumber() {
         return contractNumber;
     }
 
-    public void setContractNumber(String contractNumber) {
+    public void setContractNumber(int contractNumber) {
         this.contractNumber = contractNumber;
     }
 
@@ -70,5 +70,10 @@ public class Contract {
 
     public String getInfoToCsv() {
         return contractNumber + "," + bookingCode + "," + deposit + "," + paymentAmount + "," + customerId;
+    }
+
+    @Override
+    public int compareTo(Contract o) {
+        return this.getContractNumber()-o.getContractNumber();
     }
 }

@@ -1,6 +1,10 @@
 package models;
 
-public class Booking {
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Booking implements Comparable<Booking> {
     private String bookingId;
     private String startDay;
     private String endDate;
@@ -81,5 +85,25 @@ public class Booking {
 
     public String getInfoToCsv() {
         return bookingId + "," + startDay + "," + endDate + "," + customerId + "," + serviceName + "," + typeOfService;
+    }
+
+    @Override
+    public int compareTo(Booking booking) {
+        Date startDate1;
+        Date startDate2;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            startDate1 = dateFormat.parse(this.startDay);
+            startDate2 = dateFormat.parse(booking.startDay);
+            if (startDate1.compareTo(startDate2) == 0) {
+                Date endDate1 = dateFormat.parse(this.endDate);
+                Date endDate2 = dateFormat.parse(booking.endDate);
+                return endDate1.compareTo(endDate2);
+            }
+
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+        return startDate1.compareTo(startDate2);
     }
 }

@@ -3,13 +3,13 @@ package models;
 public class Room extends Facility {
     private String freeServiceIncluded;
 
-    public Room(String nameFacility, String usableArea, String rentalCosts, String maximumQuantity, String typeOfRental, String freeServiceIncluded) {
-        super(nameFacility, usableArea, rentalCosts, maximumQuantity, typeOfRental);
+    public Room(String facilityId, String nameFacility, String usableArea, String rentalCosts, int maximumQuantity, String typeOfRental, String freeServiceIncluded) {
+        super(facilityId, nameFacility, usableArea, rentalCosts, maximumQuantity, typeOfRental);
         this.freeServiceIncluded = freeServiceIncluded;
     }
 
     public Room(Facility f, String freeServiceIncluded) {
-        super(f.nameFacility, f.usableArea, f.rentalCosts, f.maximumQuantity, f.typeOfRental);
+        super(f.facilityId, f.nameFacility, f.usableArea, f.rentalCosts, f.maximumQuantity, f.typeOfRental);
         this.freeServiceIncluded = freeServiceIncluded;
     }
 
@@ -28,6 +28,7 @@ public class Room extends Facility {
     @Override
     public String toString() {
         return "Room :" +
+                ",id :" + this.getFacilityId() +
                 ", Tên dịch vụ :'" + this.getNameFacility() + '\'' +
                 ", Diện tích sử dụng :" + this.getUsableArea() +
                 ", Chi phí thuê :" + this.getRentalCosts() +
@@ -38,7 +39,7 @@ public class Room extends Facility {
     }
 
     public String getInfoToCsv() {
-        return nameFacility + "," + usableArea + "," + rentalCosts + "," + maximumQuantity + "," + typeOfRental + ","
+        return facilityId + "," + nameFacility + "," + usableArea + "," + rentalCosts + "," + maximumQuantity + "," + typeOfRental + ","
                 + freeServiceIncluded;
 
     }

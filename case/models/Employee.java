@@ -6,8 +6,8 @@ public class Employee extends Person {
     private String position;
     private String salary;
 
-    public Employee(int employeeId, String fullName, String dateOfBirth, String sex, String cmnd, String phoneNumber, String email, String level, String position, String salary) {
-        super(fullName, dateOfBirth, sex, cmnd, phoneNumber, email);
+    public Employee(int employeeId, String fullName, String dateOfBirth, String sex, String citizenIdentification, String phoneNumber, String email, String level, String position, String salary) {
+        super(fullName, dateOfBirth, sex, citizenIdentification, phoneNumber, email);
         this.employeeId = employeeId;
         this.level = level;
         this.position = position;
@@ -56,7 +56,7 @@ public class Employee extends Person {
                 ", Họ và tên : '" + this.getFullName() + '\'' +
                 ", Ngày sinh  : " + this.getDateOfBirth() +
                 ",  Giới tính : '" + this.getSex() + '\'' +
-                ", Số CMND :" + this.getCmnd() +
+                ", Số CMND :" + this.getCitizenIdentification() +
                 ", Số điện thoại  :" + this.getPhoneNumber() +
                 ", Email : '" + this.getEmail() + '\'' +
                 ", Trình độ  :'" + this.getLevel() + '\'' +
@@ -65,7 +65,7 @@ public class Employee extends Person {
     }
 
     public String getInfoToCsv() {
-        return employeeId + "," + fullName + "," + dateOfBirth + "," + sex + "," + cmnd + "," + phoneNumber + ","
+        return employeeId + "," + fullName + "," + dateOfBirth + "," + sex + "," + citizenIdentification + "," + phoneNumber + ","
                 + email + "," + level + "," + position + "," + salary;
     }
 }

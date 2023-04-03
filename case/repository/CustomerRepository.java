@@ -18,7 +18,7 @@ public class CustomerRepository implements ICustomerRepository {
         for (int i = 0; i < size; i++) {
             String string = stringList.get(i);
             String[] arr = string.split(",");
-            Customer customer = new Customer(Integer.parseInt(arr[0]), arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8]);
+            Customer customer = new Customer(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8]);
             customerList.add(customer);
         }
         return customerList;

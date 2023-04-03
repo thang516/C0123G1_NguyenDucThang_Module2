@@ -23,7 +23,7 @@ public class VillaRepository implements IVillaRepository {
         for (int i = 0; i < size; i++) {
             String str = stringList.get(i);
             String[] arr = str.split(",");
-            Villa villa = new Villa(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7]);
+            Villa villa = new Villa(arr[0], arr[1], arr[2], arr[3], Integer.parseInt(arr[4]), arr[5], arr[6],arr[7],arr[8]);
             villaIntegerLinkedHashMap.put(villa, 0);
         }
         return villaIntegerLinkedHashMap;

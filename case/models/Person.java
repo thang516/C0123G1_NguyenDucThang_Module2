@@ -4,15 +4,16 @@ public abstract class Person {
    protected String fullName;
      protected String dateOfBirth;
      protected String sex;
-     protected String cmnd;
+     protected String citizenIdentification;
      protected String phoneNumber;
    protected String email;
 
-    public Person(String fullName, String dateOfBirth, String sex, String cmnd, String phoneNumber, String email) {
+   //citizen identification
+    public Person(String fullName, String dateOfBirth, String sex, String citizenIdentification, String phoneNumber, String email) {
         this.fullName = fullName;
         this.dateOfBirth = dateOfBirth;
         this.sex = sex;
-        this.cmnd = cmnd;
+        this.citizenIdentification = citizenIdentification;
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
@@ -44,12 +45,12 @@ public abstract class Person {
         this.sex = sex;
     }
 
-    public String getCmnd() {
-        return cmnd;
+    public String getCitizenIdentification() {
+        return citizenIdentification;
     }
 
-    public void setCmnd(String cmnd) {
-        this.cmnd = cmnd;
+    public void setCitizenIdentification(String citizenIdentification) {
+        this.citizenIdentification = citizenIdentification;
     }
 
     public String getPhoneNumber() {
@@ -74,7 +75,7 @@ public abstract class Person {
                 " Họ và tên :'" + this.getFullName() + '\'' +
                 ", Ngày sinh : " + this.getDateOfBirth() +
                 ", Giới tính : '" + this.getSex() + '\'' +
-                ", Số CMND " + this.getCmnd() +
+                ", Số CMND " + this.getCitizenIdentification() +
                 ", Số điện thoại :" + this.getPhoneNumber() +
                 ", Email :'" + this.getEmail() + '\'';
     }

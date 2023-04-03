@@ -4,6 +4,7 @@ import models.Employee;
 import repository.EmployeeRepository;
 import repository.IEmployeeRepository;
 import services.IEmployeeService;
+import util.Regex;
 
 import java.util.List;
 import java.util.Scanner;
@@ -50,58 +51,103 @@ public class EmployeeService implements IEmployeeService {
 
     }
 
-    public enum LevelEnum {
-        TRUNGCAP, CAODANG, DAIHOC, SAUDAIHOC
-    }
-
-    public enum PositionEnum {
-        LETAN, PHUCVU, CHUYENVIEN, GIAMSAT, QUANLY, GIAMDOC
-    }
 
     public Employee enterValue() {
-        System.out.println("Nhập mã nhân viên   của bạn ");
-        int employeeId = Integer.parseInt(scanner.nextLine());
-        System.out.println("Nhập họ và tên của bạn ");
-        String name = scanner.nextLine();
-        System.out.println("Nhập sinh nhật của bạn ");
-        String dayOfBirth = scanner.nextLine();
-        System.out.println("Nhập giới tính  của bạn ");
-        String sex = scanner.nextLine();
-        System.out.println("Nhập số CMND của bạn ");
-        String cmnd = scanner.nextLine();
-        System.out.println("Nhập số điện thoại  của bạn ");
-        String phoneNumber = scanner.nextLine();
-        System.out.println("Nhập email của bạn ");
-        String email = scanner.nextLine();
-        String level;
-        String position;
-        boolean flag = true;
-        do {
-            System.out.println("Nhập trình độ của bạn (bạn có thể nhập trong 4 : trungcap,caodang,daihoc,saudaihoc) Nhớ nha viết ko dấu: ^ . ^ ");
-            level = scanner.nextLine();
-            try {
-                LevelEnum.valueOf(level.toUpperCase());
-                flag = false;
-            } catch (IllegalArgumentException e) {
-                System.out.println("vui lòng nhập 1 trong 4 cái đã gợi ý");
-            }
+        Employee employee = new Employee();
 
-        } while (flag);
-        do {
-            System.out.println("Nhập vị trí  của bạn(bạn chỉ có thể nhập 1 trong :letan,phucvu,chuyenvien,giamsat,quanly,giamdoc . Nhỡ nhập không dấu và giống như gợi ý nhé ^ ^");
-            position = scanner.nextLine();
-            try {
-                PositionEnum.valueOf(position.toUpperCase());
-                flag = false;
-            } catch (IllegalArgumentException e) {
-                System.out.println("vui lòng nhập những cái đã gợi ý");
+        try {
+            System.out.print("Nhập mã nhân viên   của bạn ");
+            int employeeId = Integer.parseInt(scanner.nextLine());
+            System.out.print("Nhập họ và tên của bạn ");
+            String name = scanner.nextLine();
+            String dayOfBirth = Regex.checkRegrex("^(([0-2][0-9])||3[0-1])\\/(([0][0-9])||1[0-2])\\/((19((2[4-9])||([3-9][0-9])))||200[0-5])$", "Nhập sinh nhật của bạn ->format Ngày sinh phải nhỏ hơn ngày hiện tại 18 năm, người dùng không được quá 100 tuổi và phải đúng định dạng dd/mm/YYYY  ");
+            System.out.print("Nhập giới tính  của bạn ");
+            String sex = scanner.nextLine();
+            System.out.print("Nhập số CMND của bạn ");
+            String citizedIdentification = scanner.nextLine();
+            String phoneNumber = Regex.checkRegrex("^((\\+84)||0)[0-9]{9}$", "Nhập số điện thoại  của bạn->(+84) hoặc 0 và 9 số điện thoại của bạn ");
+            String email = Regex.checkRegrex("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", "Nhập email của bạn nhập phải chuẩn  form như google");
+            String level="";
+            String position="";
+            boolean flag = true;
+            do {
+                System.out.print("Trình độ học vấn của bạn ?" +
+                        "\n 1.Trung Cấp" +
+                        "\n 2. Cao đẳng" +
+                        "\n 3. Đại học" +
+                        "\n 4.Sau đại học ");
+                String choose = scanner.nextLine();
+                switch (choose){
+                    case "1":
+                        level="Trung cấp";
+                        flag = false;
+                        break;
+                    case "2":
+                        level="Cao đẳng";
+                        flag=false;
+                        break;
+                    case "3":
+                        level="Đại học";
+                        flag=false;
+                        break;
+                    case "4":
+                        level="Sau Đại học";
+                        flag=false;
+                        break;
+                    default:
+                        System.out.print("Bạn đã nhập sai mời nhập lại số chỉ có từ 1 đến 4");
+                }
+
+            } while (flag);
+            do {
+                //LETAN, PHUCVU, CHUYENVIEN, GIAMSAT, QUANLY, GIAMDOC
+                System.out.print("Nhập vị trí làm việc của bạn :" +
+                        "\n 1.Lễ tân" +
+                        "\n 2.Phục vụ " +
+                        "\n 3.Chuyên viên" +
+                        "\n 4.Giám sát" +
+                        "\n 5.Quản Lý" +
+                        "\n 6.Giám đốc");
+                String choose=scanner.nextLine();
+                switch (choose){
+                    case "1":
+                        position="Lễ tân";
+                        flag=false;
+                        break;
+                    case "2":
+                        position="Phục vụ";
+                        flag=false;
+                        break;
+                    case "3":
+                        position="Chuyên viên";
+                        flag=false;
+                        break;
+                    case "4":
+                        position="Giám sát";
+                        flag=false;
+                        break;
+                    case "5":
+                        position="Quản lý";
+                        flag=false;
+                        break;
+                    case "6":
+                        position="Giám đốc";
+                        flag=false;
+                        break;
+                    default:
+                        System.out.print("Mời nhập lại số từ 1->6 đúng với vị trí làm việc của mình");
+                }
 
             }
+            while (flag);
+            System.out.print("Nhập lương  của bạn ");
+            String salary = scanner.nextLine();
+             employee = new Employee(employeeId, name, dayOfBirth, sex, citizedIdentification, phoneNumber, email, level, position, salary);
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        while (flag);
-        System.out.println("Nhập lương  của bạn ");
-        String salary = scanner.nextLine();
-        Employee employee = new Employee(employeeId, name, dayOfBirth, sex, cmnd, phoneNumber, email, level, position, salary);
         return employee;
     }
 

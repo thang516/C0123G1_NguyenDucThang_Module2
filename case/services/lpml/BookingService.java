@@ -1,75 +1,57 @@
 package services.lpml;
 
 import models.Booking;
+import repository.BookingRepository;
+import repository.IBookingRepository;
 import services.IBookingService;
-
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
-import java.util.TreeSet;
+import util.Regex;
+import java.util.*;
 
 public class BookingService implements IBookingService {
-   static TreeSet<Booking> bookingList= new TreeSet<>(new BookingComparator());
-    static IBookingService bookingService=new BookingService();
-//static TreeSet<Booking> bookingList=bookingService.displayListBookingRepository();
-   Scanner scanner = new Scanner(System.in);
-//    static Booking booking=new Booking(01,"20/3/2023","24/04/2023",1601,"Villa","Vip");
-//    static Booking booking1=new Booking(02,"20/3/2023","24/3/2023",1602,"House","sliver");
-//    static {
-//        bookingList.add(booking);
-//        bookingList.add(booking1);
-//    }
-//private  B
-    public  Booking enterValue(){
-//        String bookingId, String startDay, String endDate, String customerId, String serviceName, String typeOfService
-        System.out.println("Nhập vào id của booking ");
-        String bookingId=scanner.nextLine();
-        System.out.println("Nhập vào ngày bắt đầu thuê ");
-        String startDay=scanner.nextLine();
-        System.out.println("Nhập vào ngày kết thúc ");
-        String endDate=scanner.nextLine();
-        System.out.println("Nhập vào mã khách hàng");
-        String customerId=scanner.nextLine();
-        System.out.println("Nhập vào tên dịch vụ ");
-        String serviceName=scanner.nextLine();
-        System.out.println("Nhập vào loại dịch vụ ");
+    static IBookingRepository bookingRepository = new BookingRepository();
+    static FacilityService facilityService = new FacilityService();
+    static TreeSet<Booking> bookingList = new TreeSet<>();
+    Scanner scanner = new Scanner(System.in);
+
+
+    public void addRepositoryToFileCsv() {
+        bookingRepository.updateRepository(bookingList);
+    }
+
+    public Booking enterValue() {
+        Booking booking = new Booking();
+        try{
+        System.out.print("Nhập vào id của booking ");
+        String bookingId = scanner.nextLine();
+        String startDay = Regex.checkRegrex("^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$", "Nhập vào ngày bắt đầu thuê ");
+        String endDate = Regex.checkRegrex("^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$", "Nhập vào ngày kết thúc thuê ");
+        System.out.print("Nhập vào mã khách hàng");
+        String customerId = scanner.nextLine();
+        System.out.print("Nhập vào tên dịch vụ ");
+        String serviceName = scanner.nextLine();
+        System.out.print("Nhập vào loại dịch vụ ");
         String typeOfService = scanner.nextLine();
-        Booking booking = new Booking(bookingId,startDay,endDate,customerId,serviceName,typeOfService);
+        booking = new Booking(bookingId, startDay, endDate, customerId, serviceName, typeOfService);
+        }catch (Exception e){
+            System.out.println("Bạn nhập sai ròi nhập lại đi ^.^");
+        }
         return booking;
     }
 
     @Override
-    public void add() {
-    Booking booking = enterValue();
-    bookingList.add(booking);
+    public  void add() {
+        Booking booking = enterValue();
+        bookingList.add(booking);
+        facilityService.updateMaintain(booking.getServiceName());
     }
 
     @Override
     public void display() {
-        for ( Booking x: bookingList) {
+        for (Booking x : bookingList) {
             System.out.println(x.toString());
         }
-
     }
 
-    @Override
-    public void create() {
 
-    }
 
-    @Override
-    public void displayListContracts() {
-
-    }
-
-    @Override
-    public void edit() {
-        Booking booking=enterValue();
-        int size=bookingList.size();
-        for (int i = 0; i <size ; i++) {
-//            if(bookingList){
-//
-//            }
-        }
-    }
 }
