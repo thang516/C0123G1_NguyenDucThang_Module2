@@ -33,6 +33,7 @@ public class PromotionManagement {
                     case 2:
                         System.out.println("Display list customers get voucher ");
                         System.out.println("--------------------");
+                        promotionService.displayGetVoucher();
                         break;
                     case 3:
                         System.out.println("Return menu");
@@ -43,7 +44,7 @@ public class PromotionManagement {
                         break;
                 }
             } catch (Exception e) {
-                System.out.println("Nhập sai rồi nhập lại đi nghe ^ ^");
+                System.out.println("Nhập sai rồi nhập lại đi nghe ^ ^" + e);
             }
         }
         while (flag5);

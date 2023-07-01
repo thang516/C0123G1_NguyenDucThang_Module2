@@ -4,8 +4,8 @@ import models.Customer;
 import repository.CustomerRepository;
 import repository.ICustomerRepository;
 import util.Regex;
-
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class CustomerService implements ICustomerService {
@@ -99,7 +99,9 @@ public class CustomerService implements ICustomerService {
             System.out.println(x);
         }
     }
-
+        public  List<Customer> customers (){
+            return customerList;
+        }
     @Override
     public void delete(String customerId) {
         for (int i = 0; i < customerList.size(); i++) {

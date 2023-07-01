@@ -9,6 +9,6 @@ import java.util.TreeSet;
 
 public interface IBookingRepository {
 
-    List<Booking> displayListBookingRepository();
+    TreeSet<Booking> displayListBookingRepository();
     void updateRepository(TreeSet<Booking> facilityList);
 }

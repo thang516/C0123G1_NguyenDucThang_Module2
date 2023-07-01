@@ -1,6 +1,10 @@
 package models;
 
-public class Customer extends Person {
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Customer extends Person implements Comparable<Customer> {
     private String customerId;
     private String customerType;
     private String address;
@@ -56,5 +60,10 @@ public class Customer extends Person {
     public String getInfoToCsv() {
         return customerId + "," + fullName + "," + dateOfBirth + "," + sex + "," + citizenIdentification + "," + phoneNumber + ","
                 + email + "," + customerType + "," + address;
+    }
+
+    @Override
+    public int compareTo(Customer customer) {
+        return this.getCustomerId().compareTo(customer.getCustomerId());
     }
 }

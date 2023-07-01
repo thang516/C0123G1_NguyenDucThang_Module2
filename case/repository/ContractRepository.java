@@ -1,6 +1,4 @@
 package repository;
-
-import models.Booking;
 import models.Contract;
 import util.ReadAndWriteToFile;
 

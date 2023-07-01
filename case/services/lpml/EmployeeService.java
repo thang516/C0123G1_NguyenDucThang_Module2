@@ -100,7 +100,6 @@ public class EmployeeService implements IEmployeeService {
 
             } while (flag);
             do {
-                //LETAN, PHUCVU, CHUYENVIEN, GIAMSAT, QUANLY, GIAMDOC
                 System.out.print("Nhập vị trí làm việc của bạn :" +
                         "\n 1.Lễ tân" +
                         "\n 2.Phục vụ " +

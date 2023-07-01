@@ -23,6 +23,7 @@ public class StudentService implements IStudent {
         }
     }
 
+
     @Override
     public void add() {
         Scanner scanner = new Scanner(System.in);

@@ -32,16 +32,16 @@ public class BookingManagement {
                 int choosen4 = Integer.parseInt(scanner.nextLine());
                 switch (choosen4) {
                     case 1:
-                        System.out.print("Add new booking");
-                        System.out.print("----- Danh sách khách hàng------");
+                        System.out.println("Add new booking");
+                        System.out.println("----- Danh sách khách hàng------");
                         customerService.display();
-                        System.out.print("----- Danh sách dịch vụ -------");
+                        System.out.println("----- Danh sách dịch vụ -------");
                         facilityService.display();
                         bookingService.add();
                         break;
                     case 2:
-                        System.out.print("Display list booking ");
-                        System.out.print("--------------------");
+                        System.out.println("Display list booking ");
+                        System.out.println("--------------------");
                         bookingService.display();
                         break;
                     case 3:
